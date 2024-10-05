@@ -1,0 +1,161 @@
+<html><head><base href="https://shs.tech/"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>SHS - 傻逼帮助傻逼 | 科技工作室</title><style>
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #ffff99;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+header {
+    background-color: #ff66b2;
+    padding: 20px;
+    text-align: center;
+}
+h1 {
+    font-size: 3em;
+    margin: 0;
+    animation: wobble 2s infinite;
+}
+@keyframes wobble {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-5deg); }
+    75% { transform: rotate(5deg); }
+    100% { transform: rotate(0deg); }
+}
+nav {
+    background-color: #66ccff;
+    padding: 10px;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+nav ul li {
+    margin: 0 15px;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: all 0.3s ease;
+}
+nav ul li a:hover {
+    color: #ff66b2;
+    transform: scale(1.1);
+}
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.service {
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: #e6f9ff;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+.service:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+footer {
+    background-color: #ff66b2;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+#floating-sb {
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    font-size: 4em;
+    animation: float 3s infinite ease-in-out;
+}
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+</style></head><body>
+<header>
+    <h1>SHS - 傻逼工作室</h1>
+    <p>我们都是傻逼！</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#about">关于我们</a></li>
+        <li><a href="#services">服务项目</a></li>
+        <li><a href="#join">加入我们</a></li>
+        <li><a href="#contact">联系方式</a></li>
+    </ul>
+</nav>
+
+<main>
+    <section id="about">
+        <h2>关于我们</h2>
+        <p>欢迎来到傻逼工作室！我们是一群傻逼！</p>
+    </section>
+
+    <section id="services">
+        <h2>我们的服务</h2>
+        <div class="service">
+            <h3>没有！</h3>
+            <p>傻逼哪来的服务，滚犊子！</p>
+        </div>
+    </section>
+    <section id="join">
+        <h2>加入我们</h2>
+        <div class="service">
+            <h3>条件</h3>
+            <p>个人资产300w起</p>
+            <p>捐助SHS1w起（无偿）</p>
+            <p>智商实测低于10</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>联系我们</h2>
+        <p>邮箱：official@gudupao.top</p>
+        <p>傻逼！</p>
+    </section>
+</main>
+
+<footer>
+    <p>© 2023 SHS - 傻逼工作室。保留所有权利（如果我们还记得的话）。</p>
+</footer>
+
+<div id="floating-sb">💩</div>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+const floatingSb = document.getElementById('floating-sb');
+floatingSb.addEventListener('click', () => {
+    alert('恭喜你！你已经正式成为SHS的一员了！');
+});
+
+// 随机改变标题颜色
+setInterval(() => {
+    const randomColor = Math.floor(Math.random()*16777215).toString(16);
+    document.querySelector('h1').style.color = "#" + randomColor;
+}, 3000);
+</script>
+</body></html>
